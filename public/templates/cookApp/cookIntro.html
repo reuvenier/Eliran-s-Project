@@ -1,0 +1,40 @@
+<div layout="row" flex  class="options" ng-controller="cookCtrl">
+    <md-card class="option" ui-sref="newDish">
+        <img ng-src="/resources/chef1.png" class="md-card-image">
+        <h2><span>Create New Dish</span></h2>
+    </md-card>
+
+    <md-card class="option" ui-sref="pendingDishes">
+        <img ng-src="/resources/chef2.jpg" class="md-card-image">
+        <h2><span>Pending Dishs</span></h2>
+    </md-card>
+
+    <md-card class="option" ui-sref="myDishes({userId: '57a644983772ad242c57e3a7'})">
+        <img ng-src="/resources/chef3.png" class="md-card-image">
+        <h2><span>My Dishes</span></h2>
+    </md-card>
+
+    <md-card class="option" ui-sref="getSupport">
+        <img ng-src="/resources/chef4.png" class="md-card-image">
+        <h2><span>Get Support</span></h2>
+    </md-card>
+</div>
+
+
+<div ng-controller="cookCtrl">
+
+    <md-card class="mapContainer recepiePuppyCard">
+        <md-toolbar>
+            <h3> Wanne' cook and don't know what? </h3>
+        </md-toolbar>
+
+        <div class="padded5" layout="row">
+            <md-input-container class="md-block" flex="">
+                <label>What ingredients you have?</label>
+                <input ng-model="queryIngredients" >
+            </md-input-container>
+            <md-button class="md-accent md-raised" ng-click="getRecipe()" >Get Recipe</md-button>
+        </div>
+    </md-card>
+
+</div>

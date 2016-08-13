@@ -1,0 +1,36 @@
+
+<div layout="row" flex  class="options" ng-controller="dinerCtrl">
+    <md-card class="option" ui-sref="chefs">
+        <img ng-src="/resources/chef1.png" class="md-card-image">
+        <h2><span>See The Chefs</span></h2>
+    </md-card>
+
+    <md-card class="option" ng-click="randomDish()">
+        <img ng-src="/resources/chefSurprise.jpg" class="md-card-image" ng-click="randomDish()">
+        <h2><span>Surprise Me!</span></h2>
+    </md-card>
+
+    <md-card class="option" ui-sref="myDishes({userId: '57a644983772ad242c57e3a7'})">
+        <img ng-src="/resources/dish.jpg" class="md-card-image">
+        <h2><span>See The Dishes</span></h2>
+    </md-card>
+
+    <md-card class="option" ui-sref="getSupport">
+        <img ng-src="/resources/chef4.png" class="md-card-image">
+        <h2><span>Get Support</span></h2>
+    </md-card>
+</div>
+
+
+<br><br>
+<div class="googleMaps" ng-controller="dinerCtrl">
+    <div class="mapContainer">
+        <md-toolbar>
+            <h3>Where is the food!?</h3>
+        </md-toolbar>
+        <ui-gmap-google-map center='map.center' zoom='map.zoom'>
+            <ui-gmap-marker ng-repeat="m in marker" coords="m.coords" options="m.options" events="m.events" idkey="m.id">
+            </ui-gmap-marker>
+        </ui-gmap-google-map>
+    </div>
+</div>
